@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1875309669477766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.546, y: -0.502, z: 0}
+  m_LocalPosition: {x: -0.546, y: -0.466, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,7 +90,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243515507624077516, guid: a684bc9a1b26cfc438885d47a42fd369,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7e5eb134ce3d73c4b9194967f3576a16, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.065
   m_Pitch: 0.68
@@ -206,9 +206,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpeed: 1
+  Notwalking: 0
   PlayerRigidbody: {fileID: 50624553923670462}
   animator: {fileID: 95533941308079484}
-  NotWalking: 0
+  WalkingSound: {fileID: 8300000, guid: 3f7f15d76dc58024794ee15c05ac2889, type: 3}
+  breathingSound: {fileID: 8300000, guid: 7e5eb134ce3d73c4b9194967f3576a16, type: 3}
+  sound: {fileID: 82232784914674892}
 --- !u!212 &212692883396261138
 SpriteRenderer:
   m_ObjectHideFlags: 1

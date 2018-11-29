@@ -4,24 +4,31 @@ using UnityEditor;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("walking")]
     [Tooltip("its very responsive now so try not to go to fast")]
     public float PlayerSpeed;
+    [Tooltip("its usefull for cutseens")]
+    public bool Notwalking;
+    [Space]
+    [Header("components")]
     public Rigidbody2D PlayerRigidbody;
     public Animator animator;
     private Vector3 Direction;
-    [Tooltip("its usefull for cutseens")]
-    public bool NotWalking;
-     void Start()
+    [Space]
+    [Header("sound Efeacts")]
+    public AudioClip WalkingSound;
+    public AudioClip breathingSound;
+    public AudioSource sound;
+    void Start()
     {
-
-
+ 
     }
 
   
 
     void FixedUpdate()
     {
-        if(NotWalking == false)
+        if(Notwalking == false)
         {
             Direction = Vector2.zero;
             Direction.x = Input.GetAxisRaw("Horizontal");
@@ -34,8 +41,15 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-
-
     }
+    public void walkingSounds()
+    {
+        if (!sound.isPlaying) sound.PlayOneShot(WalkingSound, 1.0F);
+    }
+    public void BreathingSounds()
+    {
+        if(!sound.isPlaying) sound.PlayOneShot(breathingSound, 1.0F);
+
+   }
 
 }
